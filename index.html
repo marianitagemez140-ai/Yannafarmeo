@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yanna Farmeos - Servicios Profesionales Genshin Impact</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gi-blue-dark: #1e293b;
+            --gi-blue-light: #334155;
+            --gi-accent: #e2c08d;
+            --gi-text-main: #1e293b;
+            --gi-gold-gradient: linear-gradient(180deg, #f3e5c2 0%, #dbb36e 100%);
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: #ffffff;
+            color: var(--gi-text-main);
+        }
+
+        .glass-panel {
+            background: #f8fafc;
+            border: 1px solid rgba(226, 192, 141, 0.3);
+            border-radius: 16px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .highlight-card {
+            background: linear-gradient(135deg, #fff9f0 0%, #ffffff 100%);
+            border: 1px solid var(--gi-accent);
+        }
+
+        .gi-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0 8px;
+        }
+
+        .gi-table tr {
+            background: #f8fafc;
+            transition: all 0.2s;
+        }
+
+        .gi-table tr:hover {
+            background: #f1f5f9;
+        }
+
+        .gi-table td, .gi-table th {
+            padding: 16px;
+        }
+
+        .gi-table th {
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 0.1em;
+            color: var(--gi-accent);
+            text-align: left;
+        }
+
+        .price-badge {
+            background: var(--gi-gold-gradient);
+            color: #1e293b;
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+
+        .section-nav-btn {
+            padding: 10px 20px;
+            border-radius: 8px;
+            background: #f3e5c2;
+            border: 1px solid #dbb36e;
+            transition: all 0.3s;
+            font-size: 0.9rem;
+            color: #1e293b;
+        }
+
+        .section-nav-btn:hover, .section-nav-btn.active {
+            background: #dbb36e;
+            color: #ffffff;
+        }
+
+        /* Botón de la sección CTA */
+        .cta-btn-gold {
+            background: #f3e5c2;
+            border: 1px solid #dbb36e;
+        }
+
+        .sticky-nav {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background: #ffffff;
+            border-bottom: 1px solid rgba(226, 192, 141, 0.3);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .check-item::before {
+            content: "✦";
+            color: var(--gi-accent);
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body class="pb-20">
+
+    <!-- Header -->
+    <header class="py-12 px-6 text-center">
+        <h1 class="text-4xl md:text-6xl font-bold mb-4 tracking-tight text-slate-800">YANNA <span class="text-amber-600">PILOT</span></h1>
+        <p class="text-slate-600 max-w-2xl mx-auto text-lg">Impulsa tu cuenta al máximo. Servicios profesionales de farmeo, exploración y optimización de recursos.</p>
+        
+        <div class="mt-8 flex flex-wrap justify-center gap-4">
+            <div class="glass-panel px-6 py-3 flex items-center gap-3">
+                <span class="text-amber-600">💎</span>
+                <span class="text-sm font-semibold text-slate-700">Pagos vía Bendición Lunar o USD</span>
+            </div>
+            <div class="glass-panel px-6 py-3 flex items-center gap-3 border-green-500/30">
+                <span class="text-green-600">🛡️</span>
+                <span class="text-sm font-semibold text-slate-700">100% Seguro y Transparente</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navegación de Secciones -->
+    <nav class="sticky-nav px-4 py-4 mb-8 overflow-x-auto whitespace-nowrap scrollbar-hide">
+        <div class="max-w-6xl mx-auto flex gap-4">
+            <button onclick="scrollToSection('destacado')" class="section-nav-btn active">⭐ Destacado</button>
+            <button onclick="scrollToSection('exploracion')" class="section-nav-btn">🗺️ Mundo</button>
+            <button onclick="scrollToSection('progreso')" class="section-nav-btn">⚔️ Progreso</button>
+            <button onclick="scrollToSection('desafios')" class="section-nav-btn">🔥 Desafíos</button>
+            <button onclick="scrollToSection('seguridad')" class="section-nav-btn">📝 Info & Seguridad</button>
+        </div>
+    </nav>
+
+    <main class="max-w-6xl mx-auto px-6 space-y-12">
+
+        <!-- SECCIÓN: DESTACADO (PROTOGEMAS) -->
+        <section id="destacado" class="scroll-mt-24">
+            <div class="highlight-card p-8 rounded-2xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 p-4 opacity-10 text-slate-600">
+                    <svg width="120" height="120" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L1 12l11 10 11-10L12 2zm0 16.5L4.5 12 12 5.5l7.5 6.5-7.5 6.5z"/></svg>
+                </div>
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="bg-amber-500 text-white text-xs font-black px-2 py-1 rounded">PROMO</span>
+                    <h2 class="text-2xl font-bold uppercase tracking-widest text-amber-700">Servicio Destacado</h2>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-8 items-center">
+                    <div class="md:col-span-2">
+                        <h3 class="text-3xl font-bold mb-4 text-slate-800">1600 Protogemas en 24 Horas</h3>
+                        <p class="text-slate-600 leading-relaxed mb-6">
+                            Farmeo intensivo combinando exploración, logros ocultos, misiones rápidas y contenido de desafío disponible (Abismo/Teatro). Ideal para alcanzar ese personaje que tanto deseas antes de que termine su banner.
+                        </p>
+                        <ul class="space-y-2 text-sm text-slate-500 mb-8">
+                            <li class="check-item">Sujeto a contenido disponible en la cuenta.</li>
+                            <li class="check-item">Incluye limpieza de puntos de teletransporte.</li>
+                            <li class="check-item">Revisión previa de cuenta incluida.</li>
+                        </ul>
+                    </div>
+                    <div class="text-center bg-white p-8 rounded-xl border border-amber-300 shadow-md">
+                        <p class="text-slate-500 text-sm mb-2 uppercase">Costo Único</p>
+                        <div class="text-4xl font-bold text-amber-700 mb-2">$5.00 <span class="text-lg">USD</span></div>
+                        <p class="text-xs text-slate-400 mb-6">o 1 Bendición Lunar</p>
+                        <button class="w-full py-3 rounded-lg font-bold bg-amber-600 text-white hover:bg-amber-700 transition">Solicitar Ahora</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN: MUNDO -->
+        <section id="exploracion" class="scroll-mt-24">
+            <h2 class="text-xl font-bold mb-6 flex items-center gap-2 text-slate-800">
+                <span class="w-8 h-px bg-amber-600/50"></span>
+                MAPA Y EXPLORACIÓN
+            </h2>
+            <div class="glass-panel overflow-hidden">
+                <table class="gi-table">
+                    <thead>
+                        <tr>
+                            <th>Servicio</th>
+                            <th>Detalles</th>
+                            <th>Precio</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="font-bold text-slate-800">Exploración 100%</td>
+                            <td class="text-sm text-slate-600">Cofres, desafíos y puzzles de una zona específica.</td>
+                            <td><span class="price-badge">$5 - $22</span></td>
+                        </tr>
+                        <tr>
+                            <td class="font-bold text-slate-800">Recolección de Oculus</td>
+                            <td class="text-sm text-slate-600">Todos los de una nación + marcados en mapa.</td>
+                            <td><span class="price-badge">$3 - $22</span></td>
+                        </tr>
+                        <tr>
+                            <td class="font-bold text-slate-800">Misiones de Arconte</td>
+                            <td class="text-sm text-slate-600">Arco completo de historia principal.</td>
+                            <td><span class="price-badge">$5 - $15</span></td>
+                        </tr>
+                        <tr>
+                            <td class="font-bold text-slate-800">Misiones Secundarias</td>
+                            <td class="text-sm text-slate-600">Cadenas largas (Aranara, Jeht, etc.)</td>
+                            <td><span class="price-badge">$5 - $12</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- SECCIÓN: PROGRESO -->
+        <section id="progreso" class="scroll-mt-24">
+            <h2 class="text-xl font-bold mb-6 flex items-center gap-2 text-slate-800">
+                <span class="w-8 h-px bg-amber-600/50"></span>
+                PERSONAJES Y ARMAS
+            </h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="glass-panel p-6">
+                    <h3 class="text-amber-700 font-bold mb-4 uppercase text-xs tracking-widest">Ascensiones</h3>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center border-b border-slate-200 pb-3">
+                            <span class="text-sm text-slate-700">Personaje 0 a 90</span>
+                            <span class="font-bold text-amber-800">$5.00</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-slate-200 pb-3">
+                            <span class="text-sm text-slate-700">Arma 0 a 90</span>
+                            <span class="font-bold text-amber-800">$4.00</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-slate-200 pb-3">
+                            <span class="text-sm text-slate-700">Triple Corona (Materiales)</span>
+                            <span class="font-bold text-amber-800">$10.00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="glass-panel p-6">
+                    <h3 class="text-amber-700 font-bold mb-4 uppercase text-xs tracking-widest">Mantenimiento</h3>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center border-b border-slate-200 pb-3">
+                            <span class="text-sm text-slate-700">Comisiones (30 días)</span>
+                            <span class="font-bold text-amber-800">$10.00</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-slate-200 pb-3">
+                            <span class="text-sm text-slate-700">Armas de Pesca (La Captura, etc.)</span>
+                            <span class="font-bold text-amber-800">$5.00</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-slate-200 pb-3">
+                            <span class="text-sm text-slate-700">Set de Artefactos (1 semana)</span>
+                            <span class="font-bold text-amber-800">$3.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN: DESAFÍOS -->
+        <section id="desafios" class="scroll-mt-24">
+            <h2 class="text-xl font-bold mb-6 flex items-center gap-2 text-slate-800">
+                <span class="w-8 h-px bg-amber-600/50"></span>
+                ENDGAME Y EVENTOS
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                <div class="glass-panel p-6 text-center">
+                    <h4 class="font-bold mb-2 text-slate-800">Abismo Espiral</h4>
+                    <p class="text-xs text-slate-500 mb-4">Pisos 11 y 12 completos.</p>
+                    <div class="text-amber-700 font-bold">$5 - $15</div>
+                </div>
+                <div class="glass-panel p-6 text-center border-amber-300">
+                    <h4 class="font-bold mb-2 text-slate-800">Teatro Fantasía</h4>
+                    <p class="text-xs text-slate-500 mb-4">Temporada actual completa.</p>
+                    <div class="text-amber-700 font-bold">$5 - $15</div>
+                </div>
+                <div class="glass-panel p-6 text-center">
+                    <h4 class="font-bold mb-2 text-slate-800">Conflagración</h4>
+                    <p class="text-xs text-slate-500 mb-4">Modo difícil (Refulgente).</p>
+                    <div class="text-amber-700 font-bold">$5 - $15</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN: SEGURIDAD -->
+        <section id="seguridad" class="scroll-mt-24">
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="space-y-6">
+                    <h3 class="text-2xl font-bold text-amber-700">Información Importante</h3>
+                    <div class="space-y-4 text-sm text-slate-600">
+                        <p class="leading-relaxed"><strong class="text-slate-800">Exploración:</strong> El precio varía según el progreso actual de tu cuenta. Hacemos una revisión previa sin costo.</p>
+                        <p class="leading-relaxed"><strong class="text-slate-800">Pesca:</strong> Si los recursos de tu mundo se agotan, solicitaremos permiso para recolectar en otros mundos.</p>
+                        <p class="leading-relaxed"><strong class="text-slate-800">Artefactos:</strong> El servicio de $3 incluye el farmeo durante una semana. Si dispones de resina frágil, el tiempo se reduce.</p>
+                        <p class="leading-relaxed"><strong class="text-slate-800">Abismo/Teatro/Conflagración:</strong> El costo varía según nivel y builds de tus personajes. Si no están optimizados, habrá un costo extra por preparar los equipos.</p>
+                    </div>
+                </div>
+                <div class="glass-panel p-8 border-green-500/30">
+                    <h3 class="text-xl font-bold mb-6 flex items-center gap-2 text-slate-800">
+                        <span class="text-green-600">🛡️</span> Transparencia Total
+                    </h3>
+                    <ul class="space-y-4 text-sm text-slate-700">
+                        <li class="flex gap-3"><span class="text-green-600 font-bold">✓</span> Capturas de pantalla al iniciar y finalizar cada sesión.</li>
+                        <li class="flex gap-3"><span class="text-green-600 font-bold">✓</span> No se gasta resina débil, protogemas ni materiales sin aviso.</li>
+                        <li class="flex gap-3"><span class="text-green-600 font-bold">✓</span> Reporte detallado de materiales y logros obtenidos.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA FINAL -->
+        <section class="text-center py-20">
+            <h2 class="text-3xl font-bold mb-6 text-slate-800">¿Listo para mejorar tu cuenta?</h2>
+            <p class="text-slate-600 mb-10">Realizo una revisión de cuenta gratuita para darte un presupuesto exacto.</p>
+            <div class="flex justify-center">
+                <a href="https://m.me/YannaMartinez876" target="_blank" class="px-10 py-4 cta-btn-gold text-slate-800 font-bold rounded-full hover:scale-105 transition shadow-lg shadow-amber-500/20">Contactar ahora</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="text-center p-10 border-t border-slate-200 opacity-70 text-xs text-slate-500">
+        <p>Genshin Impact es una marca registrada de HoYoverse. Este es un servicio independiente ofrecido por fans para fans.</p>
+    </footer>
+
+    <script>
+        function scrollToSection(id) {
+            const element = document.getElementById(id);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+            
+            // Actualizar botones activos
+            document.querySelectorAll('.section-nav-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.innerText.toLowerCase().includes(id.substring(0,3))) {
+                    btn.classList.add('active');
+                }
+            });
+        }
+    </script>
+</body>
+</html>
